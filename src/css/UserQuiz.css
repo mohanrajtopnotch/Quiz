@@ -1,0 +1,22 @@
+/* css */
+.container-css{
+    background-color:#77bfa3;
+    width: 100vw;
+    min-height: 100vh;
+}
+.padding-css{
+    padding-top:10%
+}
+.p-css{
+    font-size:30px
+}
+.p-size{
+    font-size:25px
+}
+.input-css{
+    width: 300px;;
+}
+.user-button-css{
+    width:160px;
+    border-radius:10px;
+}
