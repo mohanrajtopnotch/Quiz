@@ -15,7 +15,7 @@ export default function UserDetail() {
     
     //Form Validation
     const formValidation=()=>{
-        if(userName==="Enter Your Name"){
+        if(userName=="Enter Your Name"){
             alert("Enter your Name");
         }
         else{
@@ -36,7 +36,7 @@ export default function UserDetail() {
                 <label for="exampleInputEmail1">Name</label>
                 <input required type="text" className="form-control input-css" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder={userName} onChange={(e)=>setUserName(e.target.value)}/>
             </div>
-            {validation==='false'?
+            {validation=='false'?
                 <button type="submit" className="btn btn-primary" onClick={()=>formValidation()
                 }>Start Quiz</button>
             :

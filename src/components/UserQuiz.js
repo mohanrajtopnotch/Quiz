@@ -15,7 +15,7 @@ export default function UserQuiz() {
     
     //Form Validation
     const formValidation=()=>{
-        if((quizId==="Enter your Quiz Title or Code or Id")){
+        if((quizId=="Enter your Quiz Title or Code or Id")){
             alert("Enter your Quiz Title or Code or Id");
         }
         else{
@@ -34,7 +34,7 @@ export default function UserQuiz() {
            <div className="form-group">
                 <label for="exampleInputPassword1">Quiz Id or Name or Code</label>
                 <input className="form-control input-css" placeholder={quizId} type="text" onChange={(e)=>{setQuizId(e.target.value)}}/>
-                {validation==='false'?
+                {validation=='false'?
                 <div className="pt-4">
                 <button className="btn-dark user-button-css" onClick={()=>{
                     formValidation()
