@@ -58,7 +58,7 @@ export default function AdminDetail() {
     }
     //Form Validation
     const formValidation=(e)=>{
-        if(idForm=="Enter your Quiz Title or Code or Id")
+        if(idForm==="Enter your Quiz Title or Code or Id")
         {
             alert("Enter Quiz ID");
         }

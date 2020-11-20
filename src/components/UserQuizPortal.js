@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 //Main Function
 export default function UserQuizPortal() {
 
-    //Importing Global States
+//Importing Global States
 const {score,setScore,questions,setQuestions,answer,quizId,setAnswer,setQuizId,setUserName}=useContext(UserContext);  
 
 //Local State
@@ -25,6 +25,7 @@ const [dataquestion, setdataquestion] = useState([]);
         })
     },[]);
     const readDataAxios=(e)=>{
+        
         //Cloud API
         //axios.get(`https://quiz-testpress.herokuapp.com/Quiz/getData/${quizId}`,
        
@@ -43,7 +44,7 @@ const [dataquestion, setdataquestion] = useState([]);
     const scoreAndNext=(e)=>{
         setAnswer(dataquestion[questions].correct);
         setButtonClick('none')
-        if(dataquestion[questions].correct==e.target.value)
+        if(dataquestion[questions].correct===e.target.value)
             {
                 setScore(score+1); 
                 setYourAnswer(e.target.value);
