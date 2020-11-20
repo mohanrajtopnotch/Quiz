@@ -25,7 +25,14 @@ const [dataquestion, setdataquestion] = useState([]);
         })
     },[]);
     const readDataAxios=(e)=>{
-        axios.get(`http://localhost:7000/Quiz/getData/${quizId}`)
+        //Cloud API
+        //axios.get(`https://quiz-testpress.herokuapp.com/Quiz/getData/${quizId}`,
+       
+        //Local HOST
+        axios.get(`http://localhost:7000//Quiz/getData/${quizId}`,
+        {
+            withCredentials: true,
+        })
         .then((res)=>{
             setdataquestion([...res.data])
         })

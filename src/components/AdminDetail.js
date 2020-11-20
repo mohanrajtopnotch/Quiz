@@ -33,7 +33,20 @@ export default function AdminDetail() {
     }
     
     //Server Post Method ****Send Data to Database****
-    axios.post(`http://localhost:7000/Quiz/createData`,data)
+    //Cloud API
+    
+    // axios.post(`https://quiz-testpress.herokuapp.com/Quiz/createData`,data,
+    //     {
+    //         withCredentials: true,
+    //     }
+    // )
+    
+    //Local HOST
+    axios.post(`http://localhost:7000/Quiz/createData`,data,
+            {
+                withCredentials: true,
+            }
+        )
         .then((res)=>{
             alert("Quiz Succesfully Created");  
             console.log(res);
@@ -45,12 +58,9 @@ export default function AdminDetail() {
     }
     //Form Validation
     const formValidation=(e)=>{
-        if( (idForm=="Enter your Quiz Title or Code or Id")&&(questionForm=="Enter Your Question")&&
-            (option1Form=="Answer Option 1")&&(option2Form=="Answer Option 2")&&
-            (option3Form=="Answer Option 3")&&(option4Form=="Answer Option 4")&&
-            (correctForm=="Enter Correct Answer"))
+        if(idForm=="Enter your Quiz Title or Code or Id")
         {
-            alert("Enter All The Fields");
+            alert("Enter Quiz ID");
         }
         else{
             createDataAxios(e);
@@ -71,10 +81,6 @@ export default function AdminDetail() {
         </div>
         {/* Question Entry Form */}
         <form>
-            {/* <div className="form-group">
-                <label for="exampleInputPassword1">Quiz Title</label>
-                <input style={{width:'300px'}}  type="text" className="form-control" id="exampleInputPassword1" placeholder={quizTitle} onChange={(e)=>setQuizTitle(e.target.value)}/>
-            </div> */}
             <div className="form-group">
                 <label for="exampleInputPassword1">Quiz Code or id</label>
                 <input type="text" className="form-control input-css" id="exampleInputPassword1" placeholder={idForm} onChange={(e)=>setIdForm(e.target.value)}/>
