@@ -1,0 +1,15 @@
+/* css */
+.container-css{
+    background-color:#77bfa3;
+    width: 100vw;
+    min-height: 100vh;
+}
+.padding-css{
+    padding-top:2%;
+}
+.p-size{
+    font-size:20px
+}
+.input-css{
+    width: 300px;;
+}

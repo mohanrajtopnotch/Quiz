@@ -1,0 +1,12 @@
+/* css */
+.container-css{
+    background-color:#77bfa3;
+    width: 100vw;
+    min-height: 100vh;
+}
+.padding-css{
+    padding-top:10%
+}
+.welcome-p-css{
+    font-size:30px
+}
