@@ -38,7 +38,7 @@ export default function AdminDetail() {
         };
 
         //Server Post Method ****Send Data to Database****
-        axios.post(`http://localhost:7000/Quiz/createData`,
+        axios.post(`https://mohan-test-press.herokuapp.com/Quiz/createData`,
                 data,
                 {
                     withCredentials: true,
